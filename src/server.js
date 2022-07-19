@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import workoutRoutes from "./routes/workouts.js";
+import userRoutes from "./routes/user.js";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 // ? routes
 app.use("/api/workouts", workoutRoutes);
+app.use("/api/user", userRoutes);
 
 // ? database
 mongoose
